@@ -2,6 +2,14 @@ html{
     scroll-behavior: smooth;
 }
 
+@font-face {
+    font-family: 'Pokemon Classic';
+    src: url(fonts/PokemonClassic.ttf);
+}
+body{
+    font-family: "Pokemon Classic";
+}
+
 #header{
     text-align: left;
     width: 100%;
@@ -12,19 +20,20 @@ html{
     right: 0px;
     overflow: hidden;
     background-color: #e4000f;
+    font-family: "Pokemon Classic";
 }
 
-.topnav{
+.topnav a{
     float: left;
-    color: #e4000f;
+    color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 15px;
 }
 
 .topnav a:hover {
-    background-color: #e4000f;
+    background-color: #F62D14;
     color: white;
 
 }
