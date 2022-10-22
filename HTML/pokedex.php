@@ -13,7 +13,7 @@
         <div id = "header">
             <div class="topnav">
                 <a class= "active" href="pokemon.html"> Home</a>
-                <a href="pokedex.html"> Pokedex</a>
+                <a href="pokedex.php"> Pokedex</a>
                 <a href="BattleSim.html"> Battle Simulator</a>
             </div>
         </div>
