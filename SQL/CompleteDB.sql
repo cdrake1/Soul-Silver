@@ -171,7 +171,7 @@ insert into dex_kanto (poke_name, poke_type1, poke_type2, poke_move_name, poke_m
 ("Dragonair" , 15 , null , "Outrage", 15 , 120),
 ("Dragonite" , 15 , 10 , "Hyper Beam", 1 , 150),
 ("Mewtwo" , 11 , null , "Future Sight", 11 , 120),
-("mew" , 11 , null , "Psychic", 11 , 90);
+("Mew" , 11 , null , "Psychic", 11 , 90);
 
 
 
