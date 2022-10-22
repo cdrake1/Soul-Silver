@@ -54,22 +54,15 @@ body{
     color: white;
 }
 
-img{
-    position: absolute;
-    left: 40%;
-    height: 200px;
-    width: 200px;
-    margin-top: 10%;
-    opacity: 0.5;
-}
+
 
 footer{
-    position: fixed;
-    min-height: 200px;
-    margin-top: -200px;
+    position: absolute;
+    bottom: 0;
     font-size: 8px;
     font-weight: bold;
     width: 100%;
+    height: 2.5rem;
     margin: 0;
     
 }
@@ -89,12 +82,18 @@ footer{
 /* css for home page*/
 .info{
     margin: 10px;
-    font-size: 10px;
+    font-size: 12px;
 }
 
 .homepage{
     margin: 10px;
     font-size: 10px;
+}
+
+img{
+    height: 200px;
+    border-radius: 3px;
+    
 }
 
 
