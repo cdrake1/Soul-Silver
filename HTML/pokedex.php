@@ -47,7 +47,7 @@
             }
             $conn->close();
 
-    ?>
+        ?>
 
 
         <footer data-role="footer">
