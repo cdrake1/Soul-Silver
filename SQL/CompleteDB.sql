@@ -1,26 +1,25 @@
 create database pokedex_db;
 use pokedex_db;
 
-drop tables if exist dex_kanto;
-create table dex_kanto
-    (
-        dex_num auto_increment primary key not null
-        poke_name varchar(20) not null
-        poke_type1 enum(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18) not null
-        poke_type2 enum(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18) 
-        poke_move_name varchar(30) not null
-        poke_move_type enum(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18) not null
-        poke_move_dmg int not null
-        FOREIGN KEY (poke_type1) REFERENCES types(type_num);
-        FOREIGN KEY (poke_type2) REFERENCES types(type_num);
-        FOREIGN KEY (poke_move_type) REFERENCES types(type_num);
-    );
+drop table if exists dex_kanto;
+create table dex_kanto    
+    (dex_num int auto_increment primary key ,        
+    poke_name varchar(20),        
+    poke_type1 int,        
+    poke_type2 int ,        
+    poke_move_name varchar(30),        
+    poke_move_type int ,        
+    poke_move_dmg int ,        
+    FOREIGN KEY (poke_type1) REFERENCES types(type_num),        
+    FOREIGN KEY (poke_type2) REFERENCES types(type_num),        
+    FOREIGN KEY (poke_move_type) REFERENCES types(type_num));
 
+
+
+drop table if exists types;
 create table types
-    (
-        type_num auto_increment primary key not null
-        type_move enum("normal", "fire", "water", "electric", "grass", "ice", "fighting", "poison", "ground", "flying", "psychic", "bug", "rock", "ghost", "dark", "dragon", "steel", "fairy") not null
-    );
+    (type_num int auto_increment primary key,
+     type_move enum("normal", "fire", "water", "electric", "grass", "ice", "fighting", "poison", "ground", "flying", "psychic", "bug", "rock", "ghost", "dark", "dragon", "steel", "fairy"));
 
 insert into dex_kanto (poke_name, poke_type1, poke_type2, poke_move_name, poke_move_type, poke_move_dmg) values
 ("Bulbasaur", 5, 8, "Bullet Seed", 4, 25),
@@ -172,7 +171,7 @@ insert into dex_kanto (poke_name, poke_type1, poke_type2, poke_move_name, poke_m
 ("Dragonair" , 15 , null , "Outrage", 15 , 120),
 ("Dragonite" , 15 , 10 , "Hyper Beam", 1 , 150),
 ("Mewtwo" , 11 , null , "Future Sight", 11 , 120),
-("Mew" , 11 , null , "Psychic", 11 , 90);
+("mew" , 11 , null , "Psychic", 11 , 90);
 
 
 
